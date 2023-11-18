@@ -58,6 +58,11 @@ class Graph {
         this.segments.splice(this.segments.indexOf(seg), 1);//Splice removes elements at given index
     }
 
+    dispose() {
+        this.points.length = 0;
+        this.segments.length = 0;
+    }
+
     draw(ctx) {
         for(const seg of this.segments) {
             seg.draw(ctx);
