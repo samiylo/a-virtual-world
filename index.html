@@ -22,14 +22,10 @@
                 const index1 = Math.floor(Math.random() * graph.points.length); //Floor ensures we have an integer value not a float
                 const index2 = Math.floor(Math.random() * graph.points.length); 
 
-                let success = false;
-                if(index1 != index2) {
-                    
-                success = graph.tryAddSegment(
+                const success = graph.tryAddSegment(
                     new Segment(graph.points[index1], graph.points[index2])
                 );
                 
-                }
                 
                 ctx.clearRect(0, 0, myCanvas.width, myCanvas.height );
                 graph.draw(ctx);
